@@ -1,0 +1,91 @@
+/* Custom CSS styles */
+
+/* Body styles */
+body {
+    background: linear-gradient(135deg, #3498db, #f0f0f0); /* Shining gradient background */
+    font-family: Arial, sans-serif; /* Set a fallback font */
+}
+
+/* Container styles */
+.container {
+    max-width: 600px; /* Limit container width for better readability */
+    margin: 50px auto; /* Center container horizontally */
+    padding: 30px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #fff; /* White background */
+}
+
+/* Heading styles */
+h2 {
+    margin-bottom: 20px; /* Add space below headings */
+    color: #333; /* Dark text color */
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 20px; /* Add space between form groups */
+}
+
+.form-control {
+    border-radius: 5px; /* Add rounded corners to form inputs */
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff; /* Blue button background */
+    border-color: #007bff; /* Blue button border */
+    border-radius: 5px; /* Add rounded corners to buttons */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Darker blue border on hover */
+}
+
+/* Review container styles */
+.review {
+    margin-bottom: 30px; /* Add space between reviews */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Review text styles */
+.review p {
+    margin-bottom: 10px; /* Add space between paragraphs */
+    color: #555; /* Darker text color */
+}
+
+/* Brewery info styles */
+#breweryInfo {
+    background-color: #f0f8ff; /* Alice blue background */
+    padding: 15px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Add review form styles */
+#reviewForm {
+    background-color: #f0e68c; /* Khaki background */
+    padding: 15px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Reviews section styles */
+#reviews {
+    background-color: #ffe4e1; /* Misty rose background */
+    padding: 15px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* API Documentation link styles */
+#apiDocumentation {
+    background-color: #000; /* Black background */
+    padding: 15px; /* Add padding */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}

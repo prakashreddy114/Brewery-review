@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery Review System - Brewery</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Brewery Details</h2>
+        <div id="breweryInfo">
+            <!-- Brewery details will be dynamically populated here -->
+        </div>
+        <hr>
+        <h2>Add Review</h2>
+        <form id="reviewForm">
+            <!-- Review form fields -->
+            <div class="form-group">
+                <label for="rating">Rating (1-5)</label>
+                <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Review</button>
+        </form>
+        <hr>
+        <h2>Reviews</h2>
+        <div id="reviews">
+            <!-- Existing reviews will be dynamically populated here -->
+            <div class="review">
+                <p>(405) Brewing Co:</p>
+                <p>This brewery offers fantastic beers with a great atmosphere. Highly recommended!</p>
+            </div>
+        </div>
+        <hr>
+        <h2>API Documentation</h2>
+        <p>Check out the <a href="https://www.openbrewerydb.org/documentation" target="_blank">Open Brewery DB API documentation</a>.</p>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/scripts.js"></script>
+    <script>
+        // Default brewery ID from the provided data
+        const defaultBreweryId = "5128df48-79fc-4f0f-8b52-d06be54d0cec";
+
+        // Fetch default brewery details from the API and populate the breweryInfo div
+        fetch(`https://api.openbrewerydb.org/breweries/${defaultBreweryId}`)
+            .then(response => response.json())
+            .then(data => {
+                const breweryInfo = document.getElementById('breweryInfo');
+                breweryInfo.innerHTML = `
+                    <p>Name: ${data.name}</p>
+                    <p>Type: ${data.brewery_type}</p>
+                    <p>Address: ${data.street}, ${data.city}, ${data.state}, ${data.postal_code}</p>
+                    <p>Phone: ${data.phone}</p>
+                `;
+            })
+            .catch(error => console.error('Error fetching default brewery details:', error));
+    </script>
+</body>
+</html>
